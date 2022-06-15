@@ -3,14 +3,22 @@ import { graphql } from 'gatsby';
 import moment from 'moment';
 import { Content, Header } from 'flotiq-components-react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import Layout from '../layouts/layout';
 import BlogPostFeaturedImage from '../components/blog-post/BlogPostFeaturedImage';
 import BlogPostAuthor from '../components/blog-post/BlogPostAuthor';
 import BlogPostMetaDetails from '../components/blog-post/BlogPostMetaDetails';
 import BlogPostNavigation from '../components/blog-post/BlogPostNavigation';
+import LanguageFallback from '../components/LanguageFallback';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
+    const { t } = useTranslation();
     const post = data.blogpost;
+
+    if (!post) {
+        return (<LanguageFallback altPosts={data.blogpostAllLanguages.nodes} />);
+    }
+
     return (
         <Layout additionalClass={['bg-white px-6']}>
             <Helmet>
@@ -55,8 +63,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             </div>
             <BlogPostNavigation
                 additionalClass={['mt-3']}
-                prevText="Previous post"
-                nextText="Next post"
+                prevText={t('Previous post')}
+                nextText={t('Next post')}
                 pageContext={pageContext}
             />
         </Layout>
@@ -64,16 +72,17 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 };
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query BlogPostBySlug($slug: String!, $language: String!) {
         site {
             siteMetadata {
                 title
             }
         }
-        blogpost( slug: { eq: $slug } ) {
+        blogpost( slug: { eq: $slug }, language: {eq: $language} ) {
             id
             title
             excerpt
+            language
             headerImage {
                 extension
                 url
@@ -136,6 +145,22 @@ export const pageQuery = graphql`
                         }
                     }
                     type
+                }
+            }
+        }
+        blogpostAllLanguages: allBlogpost( filter: {slug: { eq: $slug }} ) {
+            nodes {
+                slug
+                title
+                language
+            }
+        }
+        locales: allLocale(filter: {language: {eq: $language}}) {
+            edges {
+                node {
+                    ns
+                    data
+                    language
                 }
             }
         }

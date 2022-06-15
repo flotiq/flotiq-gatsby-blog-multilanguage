@@ -59,6 +59,11 @@
             "type": "string",
             "minLength": 1
           },
+          "language": {
+            "type": "string",
+            "default": "en",
+            "minLength": 1
+          },
           "headerImage": {
             "type": "array",
             "items": {
@@ -70,6 +75,7 @@
       }
     ],
     "required": [
+      "language",
       "title",
       "slug",
       "excerpt",
@@ -79,6 +85,7 @@
   },
   "metaDefinition": {
     "order": [
+      "language",
       "title",
       "slug",
       "excerpt",
@@ -88,7 +95,7 @@
     "propertiesConfig": {
       "slug": {
         "label": "Slug",
-        "unique": true,
+        "unique": false,
         "helpText": "Slug can only have alphanumerical characters, - and _",
         "inputType": "text"
       },
@@ -110,6 +117,17 @@
         "unique": false,
         "helpText": "",
         "inputType": "textarea"
+      },
+      "language": {
+        "label": "Language",
+        "unique": false,
+        "options": [
+          "en",
+          "pl",
+          "de"
+        ],
+        "helpText": "",
+        "inputType": "select"
       },
       "headerImage": {
         "label": "Header image",

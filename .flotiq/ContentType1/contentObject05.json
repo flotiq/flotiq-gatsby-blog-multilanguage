@@ -1,0 +1,42 @@
+{
+  "id": "blogpost-697117",
+  "slug": "post-with-picture",
+  "title": "Post ze zdjęciem",
+  "content": {
+    "time": 1643366117,
+    "blocks": [
+      {
+        "id": "AOAWmvP1rd",
+        "data": {
+          "text": "Example header",
+          "level": 2
+        },
+        "type": "header"
+      },
+      {
+        "id": "CzLBZad8_Z",
+        "data": {
+          "text": "Example paragraph."
+        },
+        "type": "paragraph"
+      }
+    ],
+    "version": "2.22.0"
+  },
+  "excerpt": "Jeśli jesteś początkującym właścicielem witryny, możesz się zastanawiać, czym jest CMS i czy go potrzebujesz. W tym artykule przyjrzymy się kilku uzasadnionym powodom, aby zainwestować w CMS, ale także spróbujemy rzucić nieco światła na wyzwania.",
+  "internal": {
+    "createdAt": "2022-06-15T15:24:06+00:00",
+    "deletedAt": "",
+    "updatedAt": "2022-06-15T15:24:17+00:00",
+    "contentType": "blogpost",
+    "objectTitle": "Post ze zdjęciem",
+    "workflow_state": "saved"
+  },
+  "language": "pl",
+  "headerImage": [
+    {
+      "type": "internal",
+      "dataUrl": "/api/v1/content/_media/_media-1656dd15-8618-4e6a-b7a6-4ce9993ab097"
+    }
+  ]
+}
