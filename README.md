@@ -2,7 +2,7 @@
     <img src="https://editor.flotiq.com/fonts/fq-logo.svg" alt="Flotiq logo" title="Flotiq" align="right" height="60" />
 </a>
 
-Gatsby starter for blog with Flotiq source
+Gatsby starter for multilanguage blog with Flotiq source
 ===========================
 
 Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
@@ -23,7 +23,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 
     ```bash
    npm install -g flotiq-cli
-   flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-blog-1.git [flotiqApiKey]
+   flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-blog-multilanguage.git [flotiqApiKey]
     ```
     * `flotiqApKey` - Read and write API key to your Flotiq account
     * `projectName` - project name or project path (if you wish to start project in or import data from the current directory - use `.`)
@@ -31,7 +31,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 2. **You can also start the project from template using Gatsby CLI**
 
     ```bash
-    gatsby new my-hello-world-starter https://github.com/flotiq/flotiq-gatsby-blog-1.git
+    gatsby new my-hello-world-starter https://github.com/flotiq/flotiq-gatsby-blog-multilanguage.git
     ```
 
 3. **Configure application**
@@ -50,7 +50,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd flotiq-gatsby-blog-1/
+    cd flotiq-gatsby-blog-multilanguage/
     gatsby develop
     ```
 
@@ -82,15 +82,15 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq/flotiq-gatsby-blog-1)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq/flotiq-gatsby-blog-multilanguage)
 
 You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minutes:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/flotiq-gatsby-blog-1)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/flotiq-gatsby-blog-multilanguage)
 
 Or to [Netlify](https://www.netlify.com/):
 
-[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-blog-1)
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-blog-multilanguage)
 
 
 ## What's inside?
