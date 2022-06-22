@@ -1,14 +1,14 @@
 {
-  "id": "blogpost-1",
+  "id": "blogpost-619349",
   "slug": "hello-my-blog",
-  "title": "Hello There!",
+  "title": "Hallo!",
   "content": {
-    "time": 1643368254832,
+    "time": 1655306547655,
     "blocks": [
       {
         "id": "CzLBZad8_Z",
         "data": {
-          "text": "Flotiq strongly encourages separation of concerns and isolates the data from the presentation layer (unlike traditional CMS like WordPress). Thanks to that - you can easily use  your data anywhere you need them"
+          "text": "Flotiq empfiehlt nachdrücklich die Trennung von Bedenken und isoliert die Daten von der Präsentationsebene (im Gegensatz zu herkömmlichen CMS wie WordPress). Dank dessen können Sie Ihre Daten überall dort verwenden, wo Sie sie benötigen"
         },
         "type": "paragraph",
         "tunes": {
@@ -128,7 +128,7 @@
       {
         "id": "40BeHKLydT",
         "data": {
-          "text": "If you\u2019re a beginning website owner you might be wondering what a CMS is and if you need one. This article will look at some valid reasons to invest in a CMS, but also will try to shed some light on the caveats, so read on."
+          "text": "If you’re a beginning website owner you might be wondering what a CMS is and if you need one. This article will look at some valid reasons to invest in a CMS, but also will try to shed some light on the caveats, so read on."
         },
         "type": "paragraph",
         "tunes": {
@@ -173,7 +173,7 @@
       {
         "id": "EcfJHKzMwA",
         "data": {
-          "text": "If you\u2019re a beginning website owner you might be wondering what a CMS is and if you need one. This article will look at some valid reasons to invest in a CMS, but also will try to shed some light on the caveats, so read on.",
+          "text": "If you’re a beginning website owner you might be wondering what a CMS is and if you need one. This article will look at some valid reasons to invest in a CMS, but also will try to shed some light on the caveats, so read on.",
           "caption": "Flotiq",
           "alignment": "left"
         },
@@ -182,12 +182,20 @@
     ],
     "version": "2.22.0"
   },
-  "excerpt": "If you\u2019re a beginning website owner you might be wondering what a CMS is and if you need one. This article will look at some valid reasons to invest in a CMS, but also will try to shed some light on the caveats, so read on.",
-  "language": "en",
+  "excerpt": "Wenn Sie ein beginnender Websitebesitzer sind, fragen Sie sich vielleicht, was ein CMS ist und ob Sie eines brauchen. Dieser Artikel befasst sich mit einigen triftigen Gründen, in ein CMS zu investieren, versucht aber auch, die Vorbehalte zu beleuchten, also lesen Sie weiter.",
+  "internal": {
+    "createdAt": "2022-06-15T15:22:54+00:00",
+    "deletedAt": "",
+    "updatedAt": "2022-06-15T15:22:54+00:00",
+    "contentType": "blogpost",
+    "objectTitle": "Hallo!",
+    "workflow_state": "saved"
+  },
+  "language": "de",
   "headerImage": [
     {
       "type": "internal",
-      "dataUrl": "/api/v1/content/_media/_media-efbbdb2f-4df3-47c2-9f71-52c6d347fdc9"
+      "dataUrl": "/api/v1/content/_media/_media-4ecfaccd-5d75-40a2-b68c-71b6897cbbc7"
     }
   ]
 }

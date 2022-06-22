@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 import { Card } from 'flotiq-components-react';
+import { useTranslation } from 'react-i18next';
 
 const CustomCard = ({ title, excerpt, date, readingTime, tags, image, slug }) => {
     const backgrounds = ['bg-olive-green', 'bg-primary', 'bg-secondary'];
+    const { t } = useTranslation();
     return (
         <Card
             horizontal
@@ -48,13 +50,13 @@ const CustomCard = ({ title, excerpt, date, readingTime, tags, image, slug }) =>
                     <Link to={`/${slug}`}>
                         <div className="flex flex-wrap justify-between text-sm md:text-xs xl:text-sm font-light mt-5">
                             <p className="mr-5">
-                                Date:
-                                {' '}
+                                { t('Date') }
+                                {': '}
                                 {date}
                             </p>
                             <p>
-                                Reading time:
-                                {' '}
+                                { t('Reading time') }
+                                {': '}
                                 {readingTime}
                             </p>
                         </div>

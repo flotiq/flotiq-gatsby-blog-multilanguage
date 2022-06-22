@@ -97,5 +97,35 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'locale',
+                path: `${__dirname}/locales`,
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-react-i18next',
+            options: {
+                localeJsonSourceName: 'locale',
+                languages: ['en', 'pl', 'de'],
+                defaultLanguage: 'en',
+                trailingSlash: 'always',
+                siteUrl: 'http://localhost:8000',
+                i18nextOptions: {
+                    interpolation: {
+                        escapeValue: false,
+                    },
+                    keySeparator: false,
+                    nsSeparator: false,
+                },
+                pages: [
+                    {
+                        matchPath: '/:lang/:slug',
+                        getLanguageFromPath: true,
+                    },
+                ],
+            },
+        },
     ],
 };

@@ -2,12 +2,12 @@
     <img src="https://editor.flotiq.com/fonts/fq-logo.svg" alt="Flotiq logo" title="Flotiq" align="right" height="60" />
 </a>
 
-Gatsby starter for blog with Flotiq source
+Gatsby starter for multilanguage blog with Flotiq source
 ===========================
 
 Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-Live Demo: https://flotiqgatsbyblog1master.gatsbyjs.io
+Live Demo: https://flotiqgatsbyblogmultilanguage.gatsbyjs.io
 
 This project use:
 * [Flotiq](https://flotiq.com) - Headless CMS for string your data (You can create account [here](https://editor.flotiq.com/register.html))
@@ -23,7 +23,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 
     ```bash
    npm install -g flotiq-cli
-   flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-blog-1.git [flotiqApiKey]
+   flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-blog-multilanguage.git [flotiqApiKey]
     ```
     * `flotiqApKey` - Read and write API key to your Flotiq account
     * `projectName` - project name or project path (if you wish to start project in or import data from the current directory - use `.`)
@@ -31,7 +31,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 2. **You can also start the project from template using Gatsby CLI**
 
     ```bash
-    gatsby new my-hello-world-starter https://github.com/flotiq/flotiq-gatsby-blog-1.git
+    gatsby new my-hello-world-starter https://github.com/flotiq/flotiq-gatsby-blog-multilanguage.git
     ```
 
 3. **Configure application**
@@ -50,7 +50,7 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd flotiq-gatsby-blog-1/
+    cd flotiq-gatsby-blog-multilanguage/
     gatsby develop
     ```
 
@@ -82,15 +82,15 @@ This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq/flotiq-gatsby-blog-1)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq/flotiq-gatsby-blog-multilanguage)
 
 You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minutes:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/flotiq-gatsby-blog-1)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/flotiq-gatsby-blog-multilanguage)
 
 Or to [Netlify](https://www.netlify.com/):
 
-[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-blog-1)
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-blog-multilanguage)
 
 
 ## What's inside?
@@ -100,6 +100,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     .
     ├── .flotiq
     ├── .github
+    ├─┬ locales
+    │ ├── de
+    │ ├── en
+    │ └── pl
     ├── node_modules
     ├─┬ src
     │ ├── assets
@@ -115,6 +119,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── .prettierignore
     ├── .prettierrc
     ├── app.json
+    ├── babel-extract.config.json
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
@@ -130,55 +135,59 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 2. **`.github`**: This directory contains templates of GitHub issues.
 
-3. **`/node_modules`**: This directory contains all packages that your project depends on (npm packages) and are automatically installed.
+3. **`/locales`**: This directory contains i18n translations JSON files.
 
-4. **`/src`**: This directory will contain all the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+4. **`/node_modules`**: This directory contains all packages that your project depends on (npm packages) and are automatically installed.
 
-5. **`/src/assets`**: This directory will contain all static assets for the project (images, favicons, custom fonts).
+5. **`/src`**: This directory will contain all the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-6. **`/src/components`**: This directory will contain all small build blocks for your templates and layouts.
+6. **`/src/assets`**: This directory will contain all static assets for the project (images, favicons, custom fonts).
 
-7. **`/src/layouts`**: This directory will contain all layout templates for your pages.
+7. **`/src/components`**: This directory will contain all small build blocks for your templates and layouts.
 
-8. **`/src/pages`**: This directory will contain all static pages for the project.
+8. **`/src/layouts`**: This directory will contain all layout templates for your pages.
 
-9. **`/src/sections`**: This directory will contain all big build blocks for your project.
+9. **`/src/pages`**: This directory will contain all static pages for the project.
 
-10. **`/src/style`**: This directory will contain global styles for the project.
+10. **`/src/sections`**: This directory will contain all big build blocks for your project.
 
-11. **`/src/templates`**: This directory will contain all templates for automatically generated pages.
+11. **`/src/style`**: This directory will contain global styles for the project.
 
-12. **`.eslintignore`**: This file tells eslint which files it should not track / not fix.
+12. **`/src/templates`**: This directory will contain all templates for automatically generated pages.
 
-13. **`.eslintrc.js`**: This is a configuration file for [Eslint](https://eslint.org/). Eslint is a tool to help keep the formatting of your code consistent automatically.
+13. **`.eslintignore`**: This file tells eslint which files it should not track / not fix.
 
-14. **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+14. **`.eslintrc.js`**: This is a configuration file for [Eslint](https://eslint.org/). Eslint is a tool to help keep the formatting of your code consistent automatically.
 
-15. **`.prettierignore`**: This file tells prettier which files it should not track / not fix.
+15. **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
-16. **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+16. **`.prettierignore`**: This file tells prettier which files it should not track / not fix.
 
-17. **`app.json`**: Configuration file for Heroku deploy. You can safely remove this file if you do not plan to deploy on Heroku.
+17. **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-18. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+18. **`app.json`**: Configuration file for Heroku deploy. You can safely remove this file if you do not plan to deploy on Heroku.
 
-19. **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+19. **`babel-extract.config.json`**: Configuration file for extracting i18n keys. Used by npm run extract command.
 
-20. **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+20. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-21. **`LICENSE`**: This Gatsby starter is licensed under the MIT license.
+21. **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
 
-22. **`netlify.toml`**: Configuration file for Netlify deploy. You can safely remove this file if you do not plan to deploy on Netlify.
+22. **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-23. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc.). This manifest is how npm knows which packages to install for your project.
+23. **`LICENSE`**: This Gatsby starter is licensed under the MIT license.
 
-24. **`README.md`**: A text file containing useful reference information about your project.
+24. **`netlify.toml`**: Configuration file for Netlify deploy. You can safely remove this file if you do not plan to deploy on Netlify.
 
-25. **`static.json`**: Configuration file for caching the project.
+25. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc.). This manifest is how npm knows which packages to install for your project.
 
-26. **`tailwind.config.js`**: Configuration file for tailwind.
+26. **`README.md`**: A text file containing useful reference information about your project.
 
-27. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your yarn dependencies that were installed for your project. **(You won’t change this file directly).**
+27. **`static.json`**: Configuration file for caching the project.
+
+28. **`tailwind.config.js`**: Configuration file for tailwind.
+
+29. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your yarn dependencies that were installed for your project. **(You won’t change this file directly).**
 
 ## Learning Gatsby
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 import Logo from '../assets/kyan-logo.png';
+import LanguageSelect from './LanguageSelect';
 
 const Header = () => (
     <Disclosure as="nav">
@@ -35,11 +36,11 @@ const Header = () => (
                                 </Link>
                             </div>
                         </div>
-                        <div className="hidden md:flex items-center justify-center w-full">
+                        <div className="hidden md:flex items-center justify-center">
                             <h1 className="text-3xl">Blog About Everything</h1>
                         </div>
                         <div className="flex items-center">
-                            <div className="flex-shrink-0">
+                            <div className="flex-shrink-0 text-sm font-regular">
                                 <a
                                     href="mailto:hello@flotiq.com"
                                     className="
@@ -48,13 +49,12 @@ const Header = () => (
                                         items-center
                                         px-4
                                         py-2
-                                        text-sm
-                                        font-regular
                                         underline
                                         hover:text-secondary"
                                 >
                                     Say Hi!
                                 </a>
+                                <LanguageSelect />
                             </div>
                         </div>
                         <div className="md:hidden flex items-center justify-center w-full md:w-auto py-5 md:py-0">
